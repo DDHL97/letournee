@@ -4,9 +4,10 @@
 	$id_principal=$_POST['id_principal'];
 	$pueblo=$_POST['pueblo'];
 	$bienvenida=$_POST['bienvenida'];
-    $img_pueblo=$_POST['img_pueblo'];
+    	$img_pueblo=$_POST['img_pueblo'];
+	$id_pueblo=$_POST['pueblos'];
 	
-	$query="UPDATE principal SET pueblo ='$pueblo', bienvenida='$bienvenida', img_pueblo = '$img_pueblo' WHERE id_principal='$id_principal'";
+	$query="UPDATE principal SET pueblo ='$pueblo', bienvenida='$bienvenida', img_pueblo = '$img_pueblo', id_pueblo = '$id_pueblo' WHERE id_principal='$id_principal'";
 	$resultado=$mysqli->query($query);
 ?>
 <html>
