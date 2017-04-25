@@ -29,7 +29,9 @@ create table principal(
     id_principal mediumint(8) not null auto_increment primary key,
     pueblo varchar(30) not null,
     bienvenida  text(400) not null,
-    img_pueblo varchar(100) null
+    img_pueblo varchar(100) null,
+    id_pueblo mediumint(8) not null,
+    foreign key (id_pueblo) references pueblos(id_pueblo)
 );
 
 
