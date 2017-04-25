@@ -1,7 +1,7 @@
 <?php
 	require('conexion.php');
 	$query="SELECT pueblo, bienvenida, img_pueblo FROM principal";
-	$resultado=$mysqli->query($query);	
+	$resultado=$mysqli->query($query);
 ?>
 <html>
 <head>
