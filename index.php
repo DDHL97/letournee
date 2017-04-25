@@ -1,9 +1,7 @@
 <?php
 	require('conexion.php');
-	$query="SELECT pr.pueblo, pr.bienvenida, pr.img_pueblo FROM principal pr, pueblos p";
+	$query="SELECT pueblo, bienvenida, img_pueblo, id_pueblo FROM principal";
 	$resultado=$mysqli->query($query);
-	$query1="SELECT id_pueblo FROM pueblos";
-	$resultado1=$mysqli->query($query1);
 ?>
 <html>
 <head>
