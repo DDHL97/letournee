@@ -12,7 +12,7 @@
 ?>
 <html>
 	<head>
-		<title>Modificar producto</title>
+		<title>Modificar inicio</title>
 	</head>
 	
 	<body>
