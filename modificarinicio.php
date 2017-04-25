@@ -5,6 +5,9 @@
 	$query="SELECT * FROM principal WHERE id_principal='$id_principal'";
 	$resultado=$mysqli->query($query);
 	$row=$resultado->fetch_assoc();
+	$query1="SELECT * FROM pueblos;
+	$resultado1=$mysqli->query($query1);
+	$row=$resultado1->fetch_assoc();
 ?>
 <html>
 <head>
@@ -75,7 +78,7 @@ function confirmar()
                 <textarea type="text" name="bienvenida" class="form-control" rows="10" cols="40" ><?php echo $row['bienvenida']; ?></textarea>
                 <label for="imagen">Subir imagen del pueblo magico</label>
                 <input type="file" name="img_pueblo">
-		   <?php while($row=$resultado->fetch_assoc()){?>
+		   <?php while($row=$resultado1->fetch_assoc()){?>
                   <select name ="pueblos" class="form-control" required autofocus>  
                     <option value="<?php echo $row['id_pueblo'];?>"><?php echo $row['nom_pueblo'];?></option>
                     <?php } ?>
