@@ -1,6 +1,6 @@
 <?php
 	require('conexion.php');
-	$query="SELECT pueblo, bienvenida, img_pueblo FROM principal";
+	$query="SELECT p.id_pueblo, pr.pueblo, pr.bienvenida, pr.img_pueblo FROM principal pr, pueblos p";
 	$resultado=$mysqli->query($query);
 ?>
 <html>
@@ -72,7 +72,7 @@
           <h2><?php echo $row['pueblo'];?></h2>
     <p><?php echo $row['bienvenida'];?></p>
 	<p>¡Visita <?php echo $row['pueblo'];?>!</p>
-          <p><a class="btn btn-default" href="<?php echo $row['pueblo'];?>.php" role="button">Ver más &raquo;</a></p>
+          <p><a class="btn btn-default" href="contenido.php?id_pueblo=<?php echo $row['id_pueblo'];?>" role="button">Ver más &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
     <?php } ?>
 
