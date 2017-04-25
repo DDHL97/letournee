@@ -3,7 +3,7 @@
 	$query="SELECT pr.pueblo, pr.bienvenida, pr.img_pueblo FROM principal pr, pueblos p";
 	$resultado=$mysqli->query($query);
 	$query1="SELECT id_pueblo FROM pueblos";
-	$resultado=$mysqli->query($query1);
+	$resultado1=$mysqli->query($query1);
 ?>
 <html>
 <head>
@@ -74,8 +74,10 @@
           <h2><?php echo $row['pueblo'];?></h2>
     <p><?php echo $row['bienvenida'];?></p>
 	<p>¡Visita <?php echo $row['pueblo'];?>!</p>
+		<?php while($row=$resultado->fetch_assoc()){?>
           <p><a class="btn btn-default" href="contenido.php?id_pueblo=<?php echo $row['id_pueblo'];?>" role="button">Ver más &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
+	 <?php } ?>
     <?php } ?>
 
 </body>
