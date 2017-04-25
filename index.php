@@ -74,10 +74,8 @@
           <h2><?php echo $row['pueblo'];?></h2>
     <p><?php echo $row['bienvenida'];?></p>
 	<p>¡Visita <?php echo $row['pueblo'];?>!</p>
-		<?php while($row=$resultado->fetch_assoc()){?>
           <p><a class="btn btn-default" href="contenido.php?id_pueblo=<?php echo $row['id_pueblo'];?>" role="button">Ver más &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-	 <?php } ?>
     <?php } ?>
 
 </body>
